@@ -704,9 +704,9 @@ ScrollingFrame.Active = true
 ScrollingFrame.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
 ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ScrollingFrame.BorderSizePixel = 0
-ScrollingFrame.Position = UDim2.new(0, 0, 0, 0)
-ScrollingFrame.Size = UDim2.new(1, 0, 0.8, 0) -- Сделал размер скроллфрейма больше
-ScrollingFrame.CanvasSize = UDim2.new(0, 0, 0, 0)
+ScrollingFrame.Position = UDim2.new(0.0116163949, 0, 0.00459968671, 0)
+ScrollingFrame.Size = UDim2.new(0.969980061, 0, 0.771001935, 0)
+ScrollingFrame.CanvasSize = UDim2.new(0, 900, 0, 412)
 UICorner.Parent = ScrollingFrame
 
 Frame.Parent = ScrollingFrame
