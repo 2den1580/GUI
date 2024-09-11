@@ -706,14 +706,17 @@ ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ScrollingFrame.BorderSizePixel = 0
 ScrollingFrame.Position = UDim2.new(0.0116163949, 0, 0.00459968671, 0)
 ScrollingFrame.Size = UDim2.new(0.969980061, 0, 0.771001935, 0)
-ScrollingFrame.CanvasSize = UDim2.new(0, 0, 0, 412)  -- Оставляем только вертикальное скроллирование
-ScrollingFrame.ScrollBarThickness = 6  -- Размер полос прокрутки (если нужно)
-ScrollingFrame.ScrollBarImageColor3 = Color3.fromRGB(200, 200, 200)  -- Цвет полос прокрутки
+
+-- Устанавливаем CanvasSize так, чтобы горизонтальная прокрутка не была необходима
+ScrollingFrame.CanvasSize = UDim2.new(0, ScrollingFrame.AbsoluteSize.X, 0, 412)
 
 -- Отключаем горизонтальную прокрутку
-ScrollingFrame.HorizontalScrollBarPosition = Enum.ScrollBarPosition.Left
-ScrollingFrame.ScrollBarImageTransparency = 1  -- Прозрачность полос прокрутки, чтобы они не мешали
-ScrollingFrame.ScrollBarImageTransparency = 1 
+ScrollingFrame.HorizontalScrollBarThickness = 0 -- Отключаем горизонтальную полосу прокрутки
+ScrollingFrame.ScrollBarImageTransparency = 1 -- Делаем полосы прокрутки прозрачными (или 1 если нужно полностью скрыть)
+
+-- Настройка вертикальной полосы прокрутки
+ScrollingFrame.ScrollBarThickness = 6 -- Вы можете настроить толщину вертикальной полосы прокрутки по вашему усмотрению
+ScrollingFrame.ScrollBarImageColor3 = Color3.fromRGB(200, 200, 200)
 UICorner.Parent = ScrollingFrame
 
 Frame.Parent = ScrollingFrame
