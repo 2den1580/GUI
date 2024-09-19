@@ -397,7 +397,7 @@ creat.Size = UDim2.new(1, 0, 0.270270258, 0)
 creat.Font = Enum.Font.SourceSans
 creat.Text = "Creators"
 creat.TextColor3 = Color3.fromRGB(255, 255, 255)
-creat.TextSize = 60.000
+creat.TextSize = 50.000
 creat.TextWrapped = true
 
 CODEQUEST.Name = "CODE QUEST"
