@@ -1537,21 +1537,6 @@ poicopy.TextWrapped = true
 	uiStroke.Parent = poicopy
 UICorner_5.Parent = poicopy
 
-poiexe.Name = "poiexe"
-poiexe.Parent = poiscr
-poiexe.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-poiexe.BackgroundTransparency = 1.000
-poiexe.BorderColor3 = Color3.fromRGB(0, 0, 0)
-poiexe.BorderSizePixel = 0
-poiexe.Position = UDim2.new(0.4, 0, 0, 0) -- Позиция по высоте можно подправить
-poiexe.Size = UDim2.new(0.15, 0, 0.15, 0) -- 15% от размера меню
-poiexe.Font = Enum.Font.SourceSans
-poiexe.Text = "Execute"
-poiexe.TextColor3 = Color3.fromRGB(255, 255, 255)
-poiexe.TextScaled = true
-poiexe.TextSize = 14.000
-poiexe.TextWrapped = true
-
 local uiStroke = Instance.new("UIStroke")
 uiStroke.Thickness = 2
 uiStroke.Color = Color3.fromRGB(255, 255, 255)
@@ -1566,24 +1551,75 @@ baner.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 baner.BackgroundTransparency = 1.000
 baner.BorderColor3 = Color3.fromRGB(0, 0, 0)
 baner.BorderSizePixel = 0
-baner.Size = UDim2.new(0.395609779, 0, 0.86190474, 0)
+baner.Position = UDim2.new(0.3, 0, 0.05, 0) -- Позиция можно отрегулировать
+baner.Size = UDim2.new(0.3, 0, 0.3, 0) -- Квадратный размер
 baner.Image = "https://assetgame.roblox.com/Game/Tools/ThumbnailAsset.ashx?aid="..scriptData.game.gameId.."&fmt=png&wd=420&ht=420"
 UICorner_7.Parent = baner
 
+-- Кнопка "Execute"
+poiexe.Name = "poiexe"
+poiexe.Parent = poiscr
+poiexe.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+poiexe.BackgroundTransparency = 1.000
+poiexe.BorderColor3 = Color3.fromRGB(0, 0, 0)
+poiexe.BorderSizePixel = 0
+poiexe.Position = UDim2.new(0.4, 0, 0.4, 0) -- Позиция ниже изображения
+poiexe.Size = UDim2.new(0.2, 0, 0.1, 0) -- Примерно 20% по ширине и 10% по высоте, чтобы не выходило за экран
+poiexe.Font = Enum.Font.SourceSans
+poiexe.Text = "Execute"
+poiexe.TextColor3 = Color3.fromRGB(255, 255, 255)
+poiexe.TextScaled = true
+poiexe.TextSize = 14.000
+poiexe.TextWrapped = true
+
+local uiStroke1 = Instance.new("UIStroke")
+uiStroke1.Thickness = 2
+uiStroke1.Color = Color3.fromRGB(255, 255, 255)
+uiStroke1.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+uiStroke1.Parent = poiexe
+
+UICorner_6.Parent = poiexe
+
+-- Кнопка "To editor"
 poiedi.Name = "poiedi"
 poiedi.Parent = poiscr
 poiedi.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 poiedi.BackgroundTransparency = 1.000
 poiedi.BorderColor3 = Color3.fromRGB(0, 0, 0)
 poiedi.BorderSizePixel = 0
-poiedi.Position = UDim2.new(0.4, 0, 0.37, 0)
-poiedi.Size = UDim2.new(0.15, 0, 0.15, 0) -- 15% от размера меню
+poiedi.Position = UDim2.new(0.4, 0, 0.52, 0) -- Позиция ниже кнопки "Execute"
+poiedi.Size = UDim2.new(0.2, 0, 0.1, 0) -- Примерно 20% по ширине и 10% по высоте
 poiedi.Font = Enum.Font.SourceSans
 poiedi.Text = "To editor"
 poiedi.TextColor3 = Color3.fromRGB(255, 255, 255)
 poiedi.TextScaled = true
 poiedi.TextSize = 14.000
 poiedi.TextWrapped = true
+
+local uiStroke2 = Instance.new("UIStroke")
+uiStroke2.Thickness = 2
+uiStroke2.Color = Color3.fromRGB(255, 255, 255)
+uiStroke2.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+uiStroke2.Parent = poiedi
+
+UICorner_8.Parent = poiedi
+
+-- Кнопка "Delete"
+poidel.Name = "poidel"
+poidel.Parent = poiscr
+poidel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+poidel.BackgroundTransparency = 1.000
+poidel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+poidel.BorderSizePixel = 0
+poidel.Position = UDim2.new(0.4, 0, 0.64, 0) -- Позиция ниже кнопки "To editor"
+poidel.Size = UDim2.new(0.2, 0, 0.1, 0) -- Примерно 20% по ширине и 10% по высоте
+poidel.Font = Enum.Font.SourceSans
+poidel.Text = "Delete"
+poidel.TextColor3 = Color3.fromRGB(255, 255, 255)
+poidel.TextScaled = true
+poidel.TextSize = 14.000
+poidel.TextWrapped = true
+
 
 local uiStroke = Instance.new("UIStroke")
 uiStroke.Thickness = 2
