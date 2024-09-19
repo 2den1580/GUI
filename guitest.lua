@@ -1477,248 +1477,168 @@ end
 
 --тута здеся гуи 
 local function createScriptFrame(scriptData)
-local poiscr = Instance.new("Frame")
-local UICorner_4 = Instance.new("UICorner")
-local poiname = Instance.new("TextLabel")
-local poicopy = Instance.new("TextButton")
-local UICorner_5 = Instance.new("UICorner")
-local poiexe = Instance.new("TextButton")
-local UICorner_6 = Instance.new("UICorner")
-local baner = Instance.new("ImageButton")
-local UICorner_7 = Instance.new("UICorner")
-local poiedi = Instance.new("TextButton")
-local UICorner_8 = Instance.new("UICorner")
-local poidel = Instance.new("TextButton")
-local UICorner_9 = Instance.new("UICorner")
-poiscr.Name = "poiscr"
-poiscr.Parent = pois
-poiscr.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-poiscr.BorderColor3 = Color3.fromRGB(0, 0, 0)
-poiscr.BorderSizePixel = 0
-poiscr.Position = UDim2.new(0, 0, -2.02326487e-06, 0)
-poiscr.Size = UDim2.new(0, 656, 0, 210)
+    local poiscr = Instance.new("Frame")
+    local UICorner_4 = Instance.new("UICorner")
+    local poiname = Instance.new("TextLabel")
+    local poicopy = Instance.new("TextButton")
+    local UICorner_5 = Instance.new("UICorner")
+    local poiexe = Instance.new("TextButton")
+    local UICorner_6 = Instance.new("UICorner")
+    local baner = Instance.new("ImageButton")
+    local UICorner_7 = Instance.new("UICorner")
+    local poiedi = Instance.new("TextButton")
+    local UICorner_8 = Instance.new("UICorner")
+    local poidel = Instance.new("TextButton")
+    local UICorner_9 = Instance.new("UICorner")
 
-UICorner_4.Parent = poiscr
+    -- Основной фрейм
+    poiscr.Name = "poiscr"
+    poiscr.Parent = pois
+    poiscr.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+    poiscr.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    poiscr.BorderSizePixel = 0
+    poiscr.Position = UDim2.new(0, 0, 0, 0)
+    poiscr.Size = UDim2.new(0.6, 0, 0.4, 0)  -- Фрейм занимает 60% ширины и 40% высоты экрана
+    UICorner_4.Parent = poiscr
 
-poiname.Name = "poiname"
-poiname.Parent = poiscr
-poiname.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-poiname.BackgroundTransparency = 1.000
-poiname.BorderColor3 = Color3.fromRGB(0, 0, 0)
-poiname.BorderSizePixel = 0
-poiname.Position = UDim2.new(-0.0121952146, 0, 0.873761833, 0)
-poiname.Size = UDim2.new(0.202743903, 0, 0.119047619, 0)
-poiname.Font = Enum.Font.SourceSans
-poiname.Text = scriptData. title or "Script name"
-poiname.TextColor3 = Color3.fromRGB(255, 255, 255)
-poiname.TextScaled = true
-poiname.TextSize = 14.000
-poiname.TextWrapped = true
+    -- Текстовое поле с названием скрипта
+    poiname.Name = "poiname"
+    poiname.Parent = poiscr
+    poiname.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    poiname.BackgroundTransparency = 1.000
+    poiname.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    poiname.BorderSizePixel = 0
+    poiname.Position = UDim2.new(0.05, 0, 0.85, 0)
+    poiname.Size = UDim2.new(0.3, 0, 0.1, 0)
+    poiname.Font = Enum.Font.SourceSans
+    poiname.Text = scriptData.title or "Script name"
+    poiname.TextColor3 = Color3.fromRGB(255, 255, 255)
+    poiname.TextScaled = true
+    poiname.TextWrapped = true
 
-poicopy.Name = "poicopy"
-poicopy.Parent = poiscr
-poicopy.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-poicopy.BackgroundTransparency = 1.000
-poicopy.BorderColor3 = Color3.fromRGB(0, 0, 0)
-poicopy.BorderSizePixel = 0
-poicopy.Position = UDim2.new(0.4, 0, 0.188047573, 0)
-poicopy.Size = UDim2.new(0.259146333, 0, 0.147619054, 0)
-poicopy.Font = Enum.Font.SourceSans
-poicopy.Text = "Copy"
-poicopy.TextColor3 = Color3.fromRGB(255, 255, 255)
-poicopy.TextScaled = true
-poicopy.TextSize = 14.000
-poicopy.TextWrapped = true
-	local uiStroke = Instance.new("UIStroke") 
-	uiStroke.Thickness = 2
-	uiStroke.Color = Color3.fromRGB(255, 255, 255)
-	uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+    -- Кнопка "Copy"
+    poicopy.Name = "poicopy"
+    poicopy.Parent = poiscr
+    poicopy.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    poicopy.BackgroundTransparency = 1.000
+    poicopy.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    poicopy.BorderSizePixel = 0
+    poicopy.Position = UDim2.new(0.7, 0, 0.1, 0)
+    poicopy.Size = UDim2.new(0.2, 0, 0.1, 0)  -- 20% ширины и 10% высоты экрана
+    poicopy.Font = Enum.Font.SourceSans
+    poicopy.Text = "Copy"
+    poicopy.TextColor3 = Color3.fromRGB(255, 255, 255)
+    poicopy.TextScaled = true
+    poicopy.TextWrapped = true
+    UICorner_5.Parent = poicopy
 
-	uiStroke.Parent = poicopy
-UICorner_5.Parent = poicopy
+    local uiStrokeCopy = Instance.new("UIStroke")
+    uiStrokeCopy.Thickness = 2
+    uiStrokeCopy.Color = Color3.fromRGB(255, 255, 255)
+    uiStrokeCopy.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+    uiStrokeCopy.Parent = poicopy
 
-local uiStroke = Instance.new("UIStroke")
-uiStroke.Thickness = 2
-uiStroke.Color = Color3.fromRGB(255, 255, 255)
-uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-uiStroke.Parent = poiexe
+    -- Кнопка "Execute"
+    poiexe.Name = "poiexe"
+    poiexe.Parent = poiscr
+    poiexe.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    poiexe.BackgroundTransparency = 1.000
+    poiexe.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    poiexe.BorderSizePixel = 0
+    poiexe.Position = UDim2.new(0.7, 0, 0, 0)
+    poiexe.Size = UDim2.new(0.2, 0, 0.1, 0)  -- 20% ширины и 10% высоты экрана
+    poiexe.Font = Enum.Font.SourceSans
+    poiexe.Text = "Execute"
+    poiexe.TextColor3 = Color3.fromRGB(255, 255, 255)
+    poiexe.TextScaled = true
+    poiexe.TextWrapped = true
+    UICorner_6.Parent = poiexe
 
-UICorner_6.Parent = poiexe
+    local uiStrokeExe = Instance.new("UIStroke")
+    uiStrokeExe.Thickness = 2
+    uiStrokeExe.Color = Color3.fromRGB(255, 255, 255)
+    uiStrokeExe.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+    uiStrokeExe.Parent = poiexe
 
-baner.Name = "baner"
-baner.Parent = poiscr
-baner.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-baner.BackgroundTransparency = 1.000
-baner.BorderColor3 = Color3.fromRGB(0, 0, 0)
-baner.BorderSizePixel = 0
-baner.Position = UDim2.new(0.3, 0, 0.05, 0) -- Позиция можно отрегулировать
-baner.Size = UDim2.new(0.3, 0, 0.3, 0) -- Квадратный размер
-baner.Image = "https://assetgame.roblox.com/Game/Tools/ThumbnailAsset.ashx?aid="..scriptData.game.gameId.."&fmt=png&wd=420&ht=420"
-UICorner_7.Parent = baner
+    -- Изображение (баннер)
+    baner.Name = "baner"
+    baner.Parent = poiscr
+    baner.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    baner.BackgroundTransparency = 1.000
+    baner.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    baner.BorderSizePixel = 0
+    baner.Position = UDim2.new(0.05, 0, 0.05, 0)
+    baner.Size = UDim2.new(0.3, 0, 0.3, 0)  -- 30% ширины и высоты экрана, квадратное
+    baner.Image = "https://assetgame.roblox.com/Game/Tools/ThumbnailAsset.ashx?aid="..scriptData.game.gameId.."&fmt=png&wd=420&ht=420"
+    UICorner_7.Parent = baner
 
--- Кнопка "Execute"
-poiexe.Name = "poiexe"
-poiexe.Parent = poiscr
-poiexe.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-poiexe.BackgroundTransparency = 1.000
-poiexe.BorderColor3 = Color3.fromRGB(0, 0, 0)
-poiexe.BorderSizePixel = 0
-poiexe.Position = UDim2.new(0.4, 0, 0.4, 0) -- Позиция ниже изображения
-poiexe.Size = UDim2.new(0.2, 0, 0.1, 0) -- Примерно 20% по ширине и 10% по высоте, чтобы не выходило за экран
-poiexe.Font = Enum.Font.SourceSans
-poiexe.Text = "Execute"
-poiexe.TextColor3 = Color3.fromRGB(255, 255, 255)
-poiexe.TextScaled = true
-poiexe.TextSize = 14.000
-poiexe.TextWrapped = true
+    -- Кнопка "To editor"
+    poiedi.Name = "poiedi"
+    poiedi.Parent = poiscr
+    poiedi.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    poiedi.BackgroundTransparency = 1.000
+    poiedi.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    poiedi.BorderSizePixel = 0
+    poiedi.Position = UDim2.new(0.7, 0, 0.3, 0)
+    poiedi.Size = UDim2.new(0.2, 0, 0.1, 0)  -- 20% ширины и 10% высоты экрана
+    poiedi.Font = Enum.Font.SourceSans
+    poiedi.Text = "To editor"
+    poiedi.TextColor3 = Color3.fromRGB(255, 255, 255)
+    poiedi.TextScaled = true
+    poiedi.TextWrapped = true
+    UICorner_8.Parent = poiedi
 
-local uiStroke1 = Instance.new("UIStroke")
-uiStroke1.Thickness = 2
-uiStroke1.Color = Color3.fromRGB(255, 255, 255)
-uiStroke1.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-uiStroke1.Parent = poiexe
+    local uiStrokeEdit = Instance.new("UIStroke")
+    uiStrokeEdit.Thickness = 2
+    uiStrokeEdit.Color = Color3.fromRGB(255, 255, 255)
+    uiStrokeEdit.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+    uiStrokeEdit.Parent = poiedi
 
-UICorner_6.Parent = poiexe
+    -- Кнопка "Delete"
+    poidel.Name = "poidel"
+    poidel.Parent = poiscr
+    poidel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    poidel.BackgroundTransparency = 1.000
+    poidel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    poidel.BorderSizePixel = 0
+    poidel.Position = UDim2.new(0.7, 0, 0.4, 0)
+    poidel.Size = UDim2.new(0.2, 0, 0.1, 0)  -- 20% ширины и 10% высоты экрана
+    poidel.Font = Enum.Font.SourceSans
+    poidel.Text = "Delete"
+    poidel.TextColor3 = Color3.fromRGB(255, 255, 255)
+    poidel.TextScaled = true
+    poidel.TextWrapped = true
+    UICorner_9.Parent = poidel
 
--- Кнопка "To editor"
-poiedi.Name = "poiedi"
-poiedi.Parent = poiscr
-poiedi.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-poiedi.BackgroundTransparency = 1.000
-poiedi.BorderColor3 = Color3.fromRGB(0, 0, 0)
-poiedi.BorderSizePixel = 0
-poiedi.Position = UDim2.new(0.4, 0, 0.52, 0) -- Позиция ниже кнопки "Execute"
-poiedi.Size = UDim2.new(0.2, 0, 0.1, 0) -- Примерно 20% по ширине и 10% по высоте
-poiedi.Font = Enum.Font.SourceSans
-poiedi.Text = "To editor"
-poiedi.TextColor3 = Color3.fromRGB(255, 255, 255)
-poiedi.TextScaled = true
-poiedi.TextSize = 14.000
-poiedi.TextWrapped = true
+    local uiStrokeDel = Instance.new("UIStroke")
+    uiStrokeDel.Thickness = 2
+    uiStrokeDel.Color = Color3.fromRGB(255, 255, 255)
+    uiStrokeDel.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+    uiStrokeDel.Parent = poidel
 
-local uiStroke2 = Instance.new("UIStroke")
-uiStroke2.Thickness = 2
-uiStroke2.Color = Color3.fromRGB(255, 255, 255)
-uiStroke2.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-uiStroke2.Parent = poiedi
+    -- Логика кнопок
+    poicopy.MouseButton1Click:Connect(function()
+        setclipboard(scriptData.script)
+    end)
 
-UICorner_8.Parent = poiedi
+    poiexe.MouseButton1Click:Connect(function()
+        local scriptString = scriptData.script
+        local success, errorMsg = pcall(function()
+            local scriptFunc = loadstring(scriptString)
+            local result = scriptFunc()
+        end)
 
--- Кнопка "Delete"
-poidel.Name = "poidel"
-poidel.Parent = poiscr
-poidel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-poidel.BackgroundTransparency = 1.000
-poidel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-poidel.BorderSizePixel = 0
-poidel.Position = UDim2.new(0.4, 0, 0.64, 0) -- Позиция ниже кнопки "To editor"
-poidel.Size = UDim2.new(0.2, 0, 0.1, 0) -- Примерно 20% по ширине и 10% по высоте
-poidel.Font = Enum.Font.SourceSans
-poidel.Text = "Delete"
-poidel.TextColor3 = Color3.fromRGB(255, 255, 255)
-poidel.TextScaled = true
-poidel.TextSize = 14.000
-poidel.TextWrapped = true
-
-
-local uiStroke = Instance.new("UIStroke")
-uiStroke.Thickness = 2
-uiStroke.Color = Color3.fromRGB(255, 255, 255)
-uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-uiStroke.Parent = poiedi
-
-UICorner_8.Parent = poiedi
-
-poidel.Name = "poidel"
-poidel.Parent = poiscr
-poidel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-poidel.BackgroundTransparency = 1.000
-poidel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-poidel.BorderSizePixel = 0
-poidel.Position = UDim2.new(0.4, 0, 0.57, 0)
-poidel.Size = UDim2.new(0.15, 0, 0.15, 0) -- 15% от размера меню
-poidel.Font = Enum.Font.SourceSans
-poidel.Text = "Delete"
-poidel.TextColor3 = Color3.fromRGB(255, 255, 255)
-poidel.TextScaled = true
-poidel.TextSize = 14.000
-poidel.TextWrapped = true
-	local uiStroke = Instance.new("UIStroke") 
-	uiStroke.Thickness = 2
-	uiStroke.Color = Color3.fromRGB(255, 255, 255)
-	uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-
-	uiStroke.Parent = poidel
-UICorner_9.Parent = poidel
-
-	poicopy.MouseButton1Click:Connect(function()
-	setclipboard(scriptData.script)
-	end)
-
-	poiexe.MouseButton1Click:Connect(function()
-	local scriptString = scriptData.script
-		local success, errorMsg = pcall(function()
-			local scriptFunc = loadstring(scriptString)
-			local result = scriptFunc()
-		end)
-
-		if not success then
-			warn("Error" .. errorMsg)
-		end
-	end)
-	
-
-	poiedi.MouseButton1Click:Connect(function()
-	editor.Text = scriptData.script
-	end)
-
-	poidel.MouseButton1Click:Connect(function()
-	poiscr:Destroy()
-	end)
-
-
-end
---тута здеся поиск
-search.MouseButton1Click:Connect(function()
-    local query = gamename.Text
-    if query ~= "" then
-        local scripts = fetchScripts(query)
-        
-		for i, v in pairs(pois:GetChildren()) do
-			if v.Name == "poiscr" then
-				v:Destroy()
-			end
-		end
-		print(scripts)
-		print(scripts.result)
-        for _, script in ipairs(scripts.result.scripts) do
-            createScriptFrame(script)
+        if not success then
+            warn("Error: " .. errorMsg)
         end
-    else
-        warn("Please enter a game name")
-    end
-end)
+    end)
 
-	local LineIndicator = strings
+    poiedi.MouseButton1Click:Connect(function()
+        editor.Text = scriptData.script
+    end)
 
+    poidel.MouseButton1Click:Connect(function()
+        poiscr:Destroy()
+    end)
+end
 
-	local function updateLineIndicator()
-		local text = editor.Text
-		local lineCount = select(2, text:gsub('\n', '\n'))
-
-		LineIndicator.Text = ""
-
-		for lineNumber = 1, lineCount + 1 do
-			LineIndicator.Text = LineIndicator.Text .. lineNumber .. "\n"
-		end
-	end
-
-
-	updateLineIndicator()
-
-
-	editor.Changed:Connect(function(property)
-		if property == "Text" then
-			updateLineIndicator()
-		end
-	end)
