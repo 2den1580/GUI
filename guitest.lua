@@ -1543,20 +1543,21 @@ poiexe.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 poiexe.BackgroundTransparency = 1.000
 poiexe.BorderColor3 = Color3.fromRGB(0, 0, 0)
 poiexe.BorderSizePixel = 0
-poiexe.Position = UDim2.new(0.4, 0, -0.00242861803, 0)
-poiexe.Size = UDim2.new(0.259146333, 0, 0.147619054, 0)
+poiexe.Position = UDim2.new(0.4, 0, 0, 0) -- Позиция по высоте можно подправить
+poiexe.Size = UDim2.new(0.15, 0, 0.15, 0) -- 15% от размера меню
 poiexe.Font = Enum.Font.SourceSans
 poiexe.Text = "Execute"
 poiexe.TextColor3 = Color3.fromRGB(255, 255, 255)
 poiexe.TextScaled = true
 poiexe.TextSize = 14.000
 poiexe.TextWrapped = true
-	local uiStroke = Instance.new("UIStroke") 
-	uiStroke.Thickness = 2
-	uiStroke.Color = Color3.fromRGB(255, 255, 255)
-	uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 
-	uiStroke.Parent = poiexe
+local uiStroke = Instance.new("UIStroke")
+uiStroke.Thickness = 2
+uiStroke.Color = Color3.fromRGB(255, 255, 255)
+uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+uiStroke.Parent = poiexe
+
 UICorner_6.Parent = poiexe
 
 baner.Name = "baner"
@@ -1565,7 +1566,7 @@ baner.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 baner.BackgroundTransparency = 1.000
 baner.BorderColor3 = Color3.fromRGB(0, 0, 0)
 baner.BorderSizePixel = 0
-baner.Size = UDim2.new(0.395609779, 0, 0.86190474, 0)
+baner.Size = UDim2.new(0.4, 0, 0.4, 0) -- 40% от размера меню для изображения
 baner.Image = "https://assetgame.roblox.com/Game/Tools/ThumbnailAsset.ashx?aid="..scriptData.game.gameId.."&fmt=png&wd=420&ht=420"
 UICorner_7.Parent = baner
 
@@ -1575,20 +1576,21 @@ poiedi.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 poiedi.BackgroundTransparency = 1.000
 poiedi.BorderColor3 = Color3.fromRGB(0, 0, 0)
 poiedi.BorderSizePixel = 0
-poiedi.Position = UDim2.new(0.4, 0, 0.368999958, 0)
-poiedi.Size = UDim2.new(0.259146333, 0, 0.147619054, 0)
+poiedi.Position = UDim2.new(0.4, 0, 0.37, 0)
+poiedi.Size = UDim2.new(0.15, 0, 0.15, 0) -- 15% от размера меню
 poiedi.Font = Enum.Font.SourceSans
 poiedi.Text = "To editor"
 poiedi.TextColor3 = Color3.fromRGB(255, 255, 255)
 poiedi.TextScaled = true
 poiedi.TextSize = 14.000
 poiedi.TextWrapped = true
-	local uiStroke = Instance.new("UIStroke") 
-	uiStroke.Thickness = 2
-	uiStroke.Color = Color3.fromRGB(255, 255, 255)
-	uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 
-	uiStroke.Parent = poiedi
+local uiStroke = Instance.new("UIStroke")
+uiStroke.Thickness = 2
+uiStroke.Color = Color3.fromRGB(255, 255, 255)
+uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+uiStroke.Parent = poiedi
+
 UICorner_8.Parent = poiedi
 
 poidel.Name = "poidel"
@@ -1597,8 +1599,8 @@ poidel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 poidel.BackgroundTransparency = 1.000
 poidel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 poidel.BorderSizePixel = 0
-poidel.Position = UDim2.new(0.4, 0, 0.568801284, 0)
-poidel.Size = UDim2.new(0.259146333, 0, 0.147619054, 0)
+poidel.Position = UDim2.new(0.4, 0, 0.57, 0)
+poidel.Size = UDim2.new(0.15, 0, 0.15, 0) -- 15% от размера меню
 poidel.Font = Enum.Font.SourceSans
 poidel.Text = "Delete"
 poidel.TextColor3 = Color3.fromRGB(255, 255, 255)
