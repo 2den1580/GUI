@@ -1566,7 +1566,8 @@ baner.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 baner.BackgroundTransparency = 1.000
 baner.BorderColor3 = Color3.fromRGB(0, 0, 0)
 baner.BorderSizePixel = 0
-baner.Size = UDim2.new(0.4, 0, 0.4, 0) -- 40% от размера меню для изображения
+baner.Position = UDim2.new(0.3, 0, 0.05, 0) -- Позиция можно отрегулировать
+baner.Size = UDim2.new(0.3, 0, 0.3, 0) -- Квадратный размер
 baner.Image = "https://assetgame.roblox.com/Game/Tools/ThumbnailAsset.ashx?aid="..scriptData.game.gameId.."&fmt=png&wd=420&ht=420"
 UICorner_7.Parent = baner
 
