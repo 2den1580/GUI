@@ -1684,4 +1684,3 @@ end)
 			updateLineIndicator()
 		end
 	end)
-
